@@ -5,10 +5,10 @@ export const example = {
     gradesList:[
         {
             group_id: 1,
-            student_name: "Nicolas Romero",
+            student_name: "Julian Cordero",
             final_grade: 38,
             absences: 3,
-            approved: "Aprobado",
+            approved: "Twiddit",
             reason: null
         },
         {
@@ -16,23 +16,23 @@ export const example = {
             student_name: "David Zambrano",
             final_grade: 43,
             absences: 1,
-            approved: "Aprobado",
+            approved: "Twiddit",
             reason: null
         },
         {
             group_id: 1,
-            student_name: "John Rodriguez",
+            student_name: "Diego Rodriguez",
             final_grade:29,
             absences: 12,
-            approved: "Reprobado",
+            approved: "Soy un twiddit",
             reason: "Notas y ausencias"
         },
         {
             group_id: 1,
-            student_name: "Mario Casallas",
+            student_name: "Adrian Casallas",
             final_grade: 48,
             absences: 12,
-            approved: "Reprobado",
+            approved: "Soy un twiddit",
             reason: "Ausencias"
         },
         {
@@ -40,7 +40,7 @@ export const example = {
             student_name: "José Gonzalez",
             final_grade: 30,
             absences: 7,
-            approved: "Aprobado",
+            approved: "Twiddit",
             reason: null
         }
     ]

@@ -1,8 +1,8 @@
 // npm install soap
 import soap from 'soap';
 
-//const url = 'http://localhost:8000/wsdl?wsdl';
-const url = 'https://92c6-186-29-56-149.ngrok.io/wsdl?wsdl';
+const url = 'http://localhost:8000/wsdl?wsdl';
+//const url = 'https://92c6-186-29-56-149.ngrok.io/wsdl?wsdl';
 
 // Create client
 soap.createClient(url, function(err, client) {
@@ -14,7 +14,7 @@ soap.createClient(url, function(err, client) {
      * in the WSDL file
      */
     var args = {
-        id: 3
+        id: "Este"
     };
     // call the service
     client.VerifyEmail(args, function(err, res) {

@@ -1,8 +1,0 @@
-<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsdl="http://34.173.4.99:8000/wsdl">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <wsdl:VerifyEmail soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-         <email xsi:type="xsd:string">juan@unal.edu.co</email>
-      </wsdl:VerifyEmail>
-   </soapenv:Body>
-</soapenv:Envelope>

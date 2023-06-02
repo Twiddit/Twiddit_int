@@ -11,33 +11,36 @@ import { example } from './example.js';
 import consumeCheckEmail from './requestCheckEmail.js'
 import consumeGetMessages from './requestGetMessages.js'
 
-const url = "http://172.17.0.6/graphql";
-
-function getActInformationById(id) {
+//const url = "http://172.17.0.6/graphql";
+const url = "http://localhost:5000/graphql";
+ 
+function searchTwiddit(text) {
     const query = gql `{
-        getActInformation(groupId:${id}){
-          courseName
-          teacherName
-          currentDate
-          gradesList{
-            group_id
-            student_name
-            final_grade
-            absences
-            approved
-            reason
-          }
-        }
+          searchTwiddit(text:"${text}") {
+ 				_id,
+        communidditsId,
+        retwidditId,
+        text,
+        creationDate,
+        imageURL1,
+        imageURL2,
+        imageURL3,
+        imageURL4,
+        videoURL,
+        tags,
+   			user
+  }
       }`
     return query
 }
 
 // the function, used by the service
 function main(args, callback) {
-    const id = args.id;
-    request(url, getActInformationById(id))
+    const text = args.text;
+    request(url, searchTwiddit(text))
         .then((data) => {
-            const act = data.getActInformation;
+            const act = data.searchTwiddit;
+            console.log(act)
             callback({
                 result: act
             });
@@ -52,12 +55,12 @@ function main(args, callback) {
 
 // the service
 var serviceObject = {
-    VerifyEmailService: {
-        VerifyEmailServiceSoapPort: {
-            VerifyEmail: main
+    MessageSplitterService: {
+        MessageSplitterServiceSoapPort: {
+            MessageSplitter: main
         },
-        VerifyEmailServiceSoap12Port: {
-            VerifyEmail: main
+        MessageSplitterServiceSoap12Port: {
+            MessageSplitter: main
         }
     }
 };
