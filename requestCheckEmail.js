@@ -1,7 +1,6 @@
 import soap from 'soap';
 
-//const url = "https://2ftestinterface.team-uncademy.repl.co/wsdl?wsdl"
-const url = "http://34.173.4.99:8000/wsdl?wsdl"
+const url = "http://34.173.4.99:8000/?wsdl"
 
 export default async(req, res) => {
     const email = req.params.email;
