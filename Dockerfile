@@ -9,6 +9,6 @@ RUN npm install
 # Bundle app source
 COPY . /Twiddit_interface/
 
-EXPOSE 9000
+EXPOSE 8000
 
 CMD ["npm", "run", "start"]
