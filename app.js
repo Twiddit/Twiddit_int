@@ -8,7 +8,8 @@ import { request, gql } from 'graphql-request'
 
 
 import { example } from './example.js';
-import consume from './request.js'
+import consumeCheckEmail from './requestCheckEmail.js'
+import consumeGetMessages from './requestGetMessages.js'
 
 const url = "http://172.17.0.6/graphql";
 
@@ -51,12 +52,12 @@ function main(args, callback) {
 
 // the service
 var serviceObject = {
-    MessageSplitterService: {
-        MessageSplitterServiceSoapPort: {
-            MessageSplitter: main
+    VerifyEmailService: {
+        VerifyEmailServiceSoapPort: {
+            VerifyEmail: main
         },
-        MessageSplitterServiceSoap12Port: {
-            MessageSplitter: main
+        VerifyEmailServiceSoap12Port: {
+            VerifyEmail: main
         }
     }
 };
@@ -72,7 +73,8 @@ app.get('/', function(req, res) {
 })
 
 //routes for consuming the other system
-app.get('/consume/:id', consume);
+app.get('/consume/:email', consumeCheckEmail);
+app.get('/consume/:email/:n', consumeGetMessages);
 
 // Launch the server and listen
 const port = 8000;
