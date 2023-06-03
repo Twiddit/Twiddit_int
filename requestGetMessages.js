@@ -38,7 +38,12 @@ export default async(req, res) => {
             if (err)
                 throw err;
             // print the service returned result
-            return res.json(response);
+            var result = response;
+            if (n == 1){
+                result.result.result=[result.result.result]
+                return res.json(result)
+            }
+            return res.json(result);
         });
     });
 };
