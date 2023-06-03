@@ -41,8 +41,10 @@ export default async(req, res) => {
             var result = response;
             if (n == 1){
                 result.result.result=[result.result.result]
+                console.log(result)
                 return res.json(result)
             }
+            console.log(result)
             return res.json(result);
         });
     });
