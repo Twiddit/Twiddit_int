@@ -39,11 +39,11 @@ export default async(req, res) => {
                 throw err;
             // print the service returned result
             var result = response;
-            if (n == 1){
+            if (typeof(result.result.result)==='string'){
                 result.result.result=[result.result.result]
-                console.log(result)
                 return res.json(result)
             }
+            
             console.log(result)
             return res.json(result);
         });
