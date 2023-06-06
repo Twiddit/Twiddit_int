@@ -43,7 +43,11 @@ export default async(req, res) => {
                 result.result.result=[result.result.result]
                 return res.json(result)
             }
-            
+            if (n == 1){
+                result.result.result=[result.result.result]
+                console.log(result)
+                return res.json(result)
+            }
             console.log(result)
             return res.json(result);
         });
