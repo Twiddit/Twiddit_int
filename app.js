@@ -12,7 +12,7 @@ import consumeCheckEmail from './requestCheckEmail.js'
 import consumeGetMessages from './requestGetMessages.js'
 
 //const url = "http://172.17.0.6/graphql";
-const url = "http://34.138.201.211:5000/graphql";
+const url = "http://35.234.252.170:5000:5000/graphql";
  
 function searchTwiddit(text) {
     const query = gql `{
